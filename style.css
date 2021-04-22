@@ -7,7 +7,7 @@ body {
 }
 
 img {
-    height: 25vh;
+    height: 20vh;
 }
 
 button {
@@ -66,7 +66,6 @@ button:hover {
 #playerContainer, #aiContainer {
     display: flex;
     width: 40vw;
-    background-color: violet;
     justify-content: center;
     align-items: center;
 }
