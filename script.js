@@ -61,8 +61,8 @@ playButton.addEventListener("click", () => {
     document.getElementById("startScreen").remove();
     mainGame.style.display = "grid";
 
-    let random1 = "AS";
-    let random2 = "AC";
+    let random1 = randomCard();
+    let random2 = randomCard();
     playerHand.push(random1, random2);
     playerCard.push(document.createElement("img"), document.createElement("img"));
     playerCard[0].src = `cards/${random1}.png`;
