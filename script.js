@@ -164,17 +164,15 @@ const playerCardCount = (i) => {
 }
 
 const playerCheckA = (n) => {
-    for (let y = 0; y < cardSuitArray.length; y++) {
-        for (let x = n; x < playerHand.length; x++) {
-            if (cardSuitArray[y] == playerHand[x][0]) {
-                if (playerTotal > 21 && cardSuitArray[y] == "A") {
-                    console.log(`card is Ace and total is higher than 21`)
-                    playerAce = true;
-                    playerAceCheckNum += 1;
-                    return playerHand[x] = "removed";
-                } else {
-                    return playerAce = false;
-                }
+    for (let x = n; x < playerHand.length; x++) {
+        if (playerHand[x][0] == "A") {
+            if (playerTotal > 21) {
+                console.log(`card is Ace and total is higher than 21`)
+                playerAce = true;
+                playerAceCheckNum += 1;
+                return playerHand[x] = "removed";
+            } else {
+                return playerAce = false;
             }
         }
     }
@@ -182,17 +180,15 @@ const playerCheckA = (n) => {
 }
 
 const aiCheckA = (n) => {
-    for (let y = 0; y < cardSuitArray.length; y++) {
-        for (let x = n; x < aiHand.length; x++) {
-            if (cardSuitArray[y] == aiHand[x][0]) {
-                if (aiTotal > 21 && cardSuitArray[y] == "A") {
-                    console.log(`card is Ace and total is higher than 21`)
-                    aiAce = true;
-                    aiAceCheckNum += 1;
-                    return aiHand[x] = "removed";
-                } else {
-                    return aiAce = false;
-                }
+    for (let x = n; x < aiHand.length; x++) {
+        if (aiHand[x][0] == "A") {
+            if (aiTotal > 21) {
+                console.log(`card is Ace and total is higher than 21`)
+                aiAce = true;
+                aiAceCheckNum += 1;
+                return aiHand[x] = "removed";
+            } else {
+                return aiAce = false;
             }
         }
     }
